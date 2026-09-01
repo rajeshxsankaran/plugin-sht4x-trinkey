@@ -113,7 +113,7 @@ zone: core assumes the Trinkey is plugged into the core node. Change to zone: sh
 Once it's running, env.temperature filtered on meta.sensor == "sht4x" and vsn == "H013" should show up in the data portal within a minute or two.
 ```
 
-YAML Produced by Claude 
+- YAML Produced by Claude 
 
 ```
 name: H013-sht4x-trinkey
