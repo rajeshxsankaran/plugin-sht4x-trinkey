@@ -1,0 +1,33 @@
+Please write a plugin that reads data from a SHT41 sensor (https://www.adafruit.com/product/5912) that is attached through a USB Serial port - /dev/ttyACM0 
+
+Here is what I get when I read from the port - 
+
+```
+# Adafruit SHT4x Trinkey Factory Test
+# Found SHT4x sensor. Serial number 0x15750F3E
+# Serial number, Temperature in *C, Relative Humidity %, Touch
+359993150, 21.14, 12.77, 178
+359993150, 21.11, 12.75, 178
+359993150, 21.13, 12.78, 179
+359993150, 21.13, 12.79, 178
+359993150, 21.13, 12.78, 179
+359993150, 21.11, 12.77, 178
+359993150, 21.11, 12.71, 179
+359993150, 21.10, 12.74, 179
+359993150, 21.13, 12.76, 179
+359993150, 21.16, 12.74, 178
+359993150, 21.12, 12.74, 178
+359993150, 21.13, 12.76, 178
+359993150, 21.14, 12.75, 178
+359993150, 21.15, 12.75, 178
+359993150, 21.14, 12.69, 178
+359993150, 21.12, 12.76, 179
+359993150, 21.17, 12.74, 178
+```
+
+Here is an example plugin - https://github.com/waggle-sensor/plugin-iio
+
+and here is more info on how to create a plugin - https://sagecontinuum.org/docs/tutorials/edge-apps/creating-an-edge-app
+
+Can you create all the files that I can put in a github repo and submit to ECR for containerization and deployment? 
+
