@@ -39,7 +39,7 @@ Can you create all the files that I can put in a github repo and submit to ECR f
 
 ## Job Submission Prompt
 
-Great! I created a repo, submitted it to the portal and my app is built and ready for deploy - 
+Great! I created a repo, submitted it to the portal and my app is built and ready for deployment - 
 
 https://portal.sagecontinuum.org/apps/app/rajesh/sht4x-trinkey?tab=tags
 
