@@ -1,0 +1,27 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt pytest
+      - run: pytest -q
+      - name: smoke test in replay mode
+        run: |
+          PYWAGGLE_LOG_DIR=test-run python3 main.py --replay test/sample_stream.txt --publish-interval 0.1
+          test -s test-run/data.ndjson
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t plugin-sht4x-trinkey:ci .

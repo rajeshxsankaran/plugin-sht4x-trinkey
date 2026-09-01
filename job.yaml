@@ -1,0 +1,22 @@
+# Example job spec. Submit with:
+#   sesctl submit --file-path job.yaml
+name: sht4x-trinkey
+plugins:
+  - name: sht4x-trinkey
+    pluginSpec:
+      image: registry.sagecontinuum.org/CHANGEME/sht4x-trinkey:0.1.0
+      args:
+        - --device
+        - /dev/ttyACM0
+        - --publish-interval
+        - "30"
+        - --aggregate
+        - mean
+      selector:
+        resource.shield: "true"
+nodes:
+  W000: true
+scienceRules:
+  - 'schedule("sht4x-trinkey"): cronjob("sht4x-trinkey", "* * * * *")'
+successCriteria:
+  - WallClock('1d')
