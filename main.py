@@ -265,11 +265,11 @@ def parse_args(argv=None):
         help="also publish per-interval min and max for temperature and humidity",
     )
 
-    parser.add_argument("--name-temperature", default="sys.temperature", help="measurement name for temperature")
+    parser.add_argument("--name-temperature", default="env.temperature", help="measurement name for temperature")
     parser.add_argument(
-        "--name-humidity", default="sys.relative_humidity", help="measurement name for relative humidity"
+        "--name-humidity", default="env.relative_humidity", help="measurement name for relative humidity"
     )
-    parser.add_argument("--name-touch", default="sys.touch.raw", help="measurement name for the touch count")
+    parser.add_argument("--name-touch", default="env.touch.raw", help="measurement name for the touch count")
 
     parser.add_argument("--read-timeout", type=float, default=2.0, help="serial read timeout in seconds")
     parser.add_argument(
